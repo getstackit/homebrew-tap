@@ -5,13 +5,13 @@
 class Stackit < Formula
   desc "Command-line tool for managing stacked changes in Git"
   homepage "https://github.com/getstackit/stackit"
-  version "0.16.6"
+  version "0.16.7"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/getstackit/stackit/releases/download/v0.16.6/stackit_Darwin_x86_64.tar.gz"
-      sha256 "f914a4fb69b4ba95b0269c86229d1e91cc6ad47bb90bdf14f5885e52eea7f054"
+      url "https://github.com/getstackit/stackit/releases/download/v0.16.7/stackit_Darwin_x86_64.tar.gz"
+      sha256 "7576b41f1c6ba3929a498fa860bc2a5a58c6b6541e381e0f3e6751476901b9b4"
 
       def install
         bin.install "stackit"
@@ -19,8 +19,8 @@ class Stackit < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/getstackit/stackit/releases/download/v0.16.6/stackit_Darwin_arm64.tar.gz"
-      sha256 "9033e273f27ea53cf82d379e03e611d9d414e8663b9685c81b6fd26511b389ee"
+      url "https://github.com/getstackit/stackit/releases/download/v0.16.7/stackit_Darwin_arm64.tar.gz"
+      sha256 "32affe3c64196f3d41853965f5f77fe7d4de00c3f319275ec1ff41565b0011f5"
 
       def install
         bin.install "stackit"
@@ -31,16 +31,16 @@ class Stackit < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/getstackit/stackit/releases/download/v0.16.6/stackit_Linux_x86_64.tar.gz"
-      sha256 "b3a32458738661e81cf4dac65acb0ef050a4a9561ea389846fa32a8c7caa7d3d"
+      url "https://github.com/getstackit/stackit/releases/download/v0.16.7/stackit_Linux_x86_64.tar.gz"
+      sha256 "1ef7d8ebfa6920c02800a5a4274ca3e3e32d289d0514657354f9479eae16f594"
       def install
         bin.install "stackit"
         bin.install_symlink "stackit" => "st"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/getstackit/stackit/releases/download/v0.16.6/stackit_Linux_arm64.tar.gz"
-      sha256 "0e2e53972210bc53a51febe9ae858d94b1c7b8011cd89e5b72e051fa0a8d21e2"
+      url "https://github.com/getstackit/stackit/releases/download/v0.16.7/stackit_Linux_arm64.tar.gz"
+      sha256 "c9e5b6347874919356636963e2f07739440e28e173dc92fb87b25183cea39ef8"
       def install
         bin.install "stackit"
         bin.install_symlink "stackit" => "st"
