@@ -5,21 +5,21 @@
 class StackitServer < Formula
   desc "Server for stackit web UI and API"
   homepage "https://github.com/getstackit/stackit"
-  version "0.23.0"
+  version "0.24.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/getstackit/stackit/releases/download/v0.23.0/stackit-server_Darwin_x86_64.tar.gz"
-      sha256 "17c37599599c1873568bd10abd7d84b26d5bcfd65391d783a15de94008362c54"
+      url "https://github.com/getstackit/stackit/releases/download/v0.24.0/stackit-server_Darwin_x86_64.tar.gz"
+      sha256 "bcd8dca5565798e04f6a07015322b0482804c981ac260dc8e09107070cbe5cdf"
 
       define_method(:install) do
         bin.install "stackit-server"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/getstackit/stackit/releases/download/v0.23.0/stackit-server_Darwin_arm64.tar.gz"
-      sha256 "9ced6878e88950a163356fb97048639500c136d28ca7a7abb2e95bbe51848521"
+      url "https://github.com/getstackit/stackit/releases/download/v0.24.0/stackit-server_Darwin_arm64.tar.gz"
+      sha256 "258befde7afc1456f4fa8b613108a96a172e750c77e88056e5f2de35e46254f9"
 
       define_method(:install) do
         bin.install "stackit-server"
@@ -29,15 +29,15 @@ class StackitServer < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/getstackit/stackit/releases/download/v0.23.0/stackit-server_Linux_x86_64.tar.gz"
-      sha256 "cbadf8d509a0f3ee6dd4aad96646d391db9732e2b0d8f3c2d2ae2a52adef4608"
+      url "https://github.com/getstackit/stackit/releases/download/v0.24.0/stackit-server_Linux_x86_64.tar.gz"
+      sha256 "c74a6e287845532257477f25f0dce06b3275d85843d90e8eef513f027b60b13f"
       define_method(:install) do
         bin.install "stackit-server"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/getstackit/stackit/releases/download/v0.23.0/stackit-server_Linux_arm64.tar.gz"
-      sha256 "a12eec010379976c087181e30ebbc8b132a73824dfbae778c5b2886d228061f6"
+      url "https://github.com/getstackit/stackit/releases/download/v0.24.0/stackit-server_Linux_arm64.tar.gz"
+      sha256 "3e4cc3f6a1b6db94712efdd91f07459025bb7ae4b96a7f49156f2edb30446406"
       define_method(:install) do
         bin.install "stackit-server"
       end
